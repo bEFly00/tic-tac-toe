@@ -1,0 +1,102 @@
+*,
+*::before,
+*::after {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+
+
+body {
+background-image: linear-gradient(to bottom right, #ce4f99, royalblue);
+margin: 0 auto;
+height: 100vh;
+display: grid
+}
+
+
+
+.tictactoe-grid {
+display: grid;
+gap: 16px;
+grid-template-columns: repeat(3, 1fr);
+grid-template-rows: repeat(3, 1fr);
+margin: 0 auto;
+padding: 16px;
+background-color: olive;
+border-radius: 8px;
+}
+
+
+
+button {
+height: 100px;
+width: 100px;
+border: 1px solid black;
+font-size: 75px;
+/* align-items: center;
+justify-content: center; */
+place-items: center;
+display: flex;
+/* margin: 16px; */
+border-radius: 8px;
+background-color: lightgray;
+}
+
+
+
+.main {
+/* height: 100vh; */
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column; /* TODO: column is the default */
+}
+
+
+
+.border {
+padding: 50px;
+/* border: 1px solid white; */
+outline: 1px solid white;
+border-radius: 20px;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+background-color: tomato;
+}
+
+
+
+input {
+margin-top: 30px;
+width: 80px;
+height: 50px;
+font-size: larger;
+}
+
+
+
+h1 {
+font-family: cursive;
+font-size: 50px;
+text-decoration: underline;
+font-weight: bold;
+color: black;
+margin-bottom: 16px;
+}
+
+
+
+button:empty {
+background-color: white;
+}
+
+
+
+button:hover {
+cursor: pointer;
+background-color: lightgray;
+}

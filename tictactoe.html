@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="./tictactoe.css">
+    
+</head>
+<body>
+    <div class="main">
+        <div class="border">
+            <h1>Tic-Tac-Toe</h1>
+            <div class="tictactoe-grid">
+                    <button id="1" class="tile"></button>
+                    <button id="2" class="tile"></button>
+                    <button id="3" class="tile"></button>
+                    <button id="4" class="tile"></button>
+                    <button id="5" class="tile"></button>
+                    <button id="6" class="tile"></button>
+                    <button id="7" class="tile"></button>
+                    <button id="8" class="tile"></button>
+                    <button id="9" class="tile"></button> 
+                </div>
+                <input onclick="Deleter()" type="button" value="Reset">
+        </div>
+    </div>
+ 
+
+    <script>
+        let logic = false
+        let newArray=document.querySelectorAll(".tile")
+        for(let i=0;i<newArray.length;i++){
+            newArray[i].addEventListener("click", Clicker);
+        }
+        function Clicker(){
+
+            if(event.target.innerHTML=="" && logic==false){
+                event.target.innerHTML = "❌"
+                logic = true
+            }
+            if(event.target.innerHTML=="" && logic==true){
+                event.target.innerHTML = "⭕" 
+                logic = false
+            }
+        }
+        function Deleter(){
+            for(let i=0;i<newArray.length;i++){
+                newArray[i].innerHTML = ""
+            }
+        }
+    </script>
+
+<!-- let playerIndex = 0;
+// let hasLogic = false;
+let tiles = document.querySelectorAll(".tile");
+// TODO: replace with forEach - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
+// tiles.forEach((tile) => tile.addEventListener("click", clicker))
+for (let i = 0; i < tiles.length; i++) {
+tiles[i].addEventListener("click", clicker);
+}
+let player = document.querySelector(".player");
+// it should be const
+let playerX = "❌";
+let playerO = "⭕";
+let players = [playerO, playerX];
+function clicker() {
+// Guard claused - https://learningactors.com/javascript-guard-clauses-how-you-can-refactor-conditional-logic/
+if (event.target.innerHTML !== "") {
+return;
+}
+ if (playerIndex === 0) {
+event.target.innerHTML = playerX;
+// hasLogic = true;
+player.innerHTML = players[playerIndex];
+playerIndex = 1;
+ return;
+}
+ event.target.innerHTML = playerO;
+// hasLogic = false;
+player.innerHTML = players[playerIndex];
+playerIndex = 0;
+}
+function resetBoard() {
+// tiles.forEch((tile) => tile.innerHTML = '')
+for (let i = 0; i < tiles.length; i++) {
+tiles[i].innerHTML = "";
+}
+} -->
+</body>
+</html>
